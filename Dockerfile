@@ -24,7 +24,7 @@ RUN mkdir -p /etc/resty-auto-ssl
 RUN mkdir -p /usr/local/openresty/nginx/conf/conf.d
 RUN mkdir -p /opt/ingress
 
-ADD controller/proxt.tpl /opt/ingress
+ADD controller/proxy.tpl /opt/ingress
 ADD config/nginx.conf /usr/local/openresty/nginx/conf/nginx.conf
 
 COPY --from=build /src/controller/controller /opt/ingress/controller
