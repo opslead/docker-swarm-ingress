@@ -8,10 +8,10 @@ FROM openresty/openresty:jammy
 LABEL maintainer="opslead"
 LABEL repository="https://github.com/opslead/docker-swarm-ingress"
 
-ENV DOCKER_HOST "unix:///var/run/docker.sock" \
-	UPDATE_INTERVAL "1" \
-	OUTPUT_FILE "/usr/local/openresty/nginx/conf/conf.d/proxy.conf" \
-	TEMPLATE_FILE "/opt/ingress/proxy.tpl"
+ENV DOCKER_HOST="unix:///var/run/docker.sock" \
+	UPDATE_INTERVAL="1" \
+	OUTPUT_FILE="/usr/local/openresty/nginx/conf/conf.d/proxy.conf" \
+	TEMPLATE_FILE="/opt/ingress/proxy.tpl"
 
 RUN /usr/local/openresty/luajit/bin/luarocks install lua-resty-auto-ssl
 RUN /usr/local/openresty/luajit/bin/luarocks install lua-resty-http
