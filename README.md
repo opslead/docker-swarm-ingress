@@ -17,6 +17,7 @@ Swarm Ingress OpenResty is a ingress service for Docker in Swarm mode that makes
 - Automatic service discovery and load balancing handled by Docker
 - Scaled and maintained by the Swarm for high resilience and performance
 - On the fly SSL registration and renewal
+- Using Redis as SSL certificates storage that allow to scale service
 
 ### SSL registration and renewal
 
