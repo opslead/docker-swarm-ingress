@@ -41,6 +41,15 @@ By default a request would be redirected to `http://service-name:80/`.
 | `ingress.max_body_size` | `no` | `10m` | Max request body size | 
 | `ingress.proxy_timeout` | `no` | `600` | Proxy timeout | 
 
+### Ingress installation
+
+```bash
+curl -o ingress.yaml https://raw.githubusercontent.com/opslead/docker-swarm-ingress/main/examples/ingress-stack.yaml
+
+docker network create --driver overlay ingress-routing
+docker stack deploy -c ingress.yaml ingress
+```
+
 ### Run a Service with Enabled Ingress
 
 It is important to run the service which should be used for ingress that it
